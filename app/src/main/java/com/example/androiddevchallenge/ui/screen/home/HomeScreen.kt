@@ -36,12 +36,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import coil.compose.rememberImagePainter
+import coil.compose.rememberAsyncImagePainter
+import coil.request.ImageRequest
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.model.DogBreed
 import com.example.androiddevchallenge.model.Pet
@@ -269,13 +271,12 @@ fun PetImage(
 ) {
     Surface(shape = shape, elevation = elevation) {
         Image(
-            painter = rememberImagePainter(
-                data = imageUrl ?: "",
-                builder = {
+            painter = rememberAsyncImagePainter(
+                ImageRequest.Builder(LocalContext.current).data(data = imageUrl ?: "").apply(block = fun ImageRequest.Builder.() {
                     crossfade(true)
                     error(R.drawable.ic_dog)
                     placeholder(R.drawable.ic_placeholder)
-                }
+                }).build()
             ),
             contentDescription = "Pet Image",
             modifier = modifier,

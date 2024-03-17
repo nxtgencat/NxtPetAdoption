@@ -65,7 +65,7 @@ fun DogDetailScreen(
                 onMoreButtonClicked = { Toast.makeText(context, it, Toast.LENGTH_SHORT).show() }
             )
         }
-    ) { it ->
+    ) {it ->
         selectedDog?.let { dog ->
             Column(
                 modifier = Modifier
