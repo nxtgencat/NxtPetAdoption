@@ -13,10 +13,11 @@ NxtPetAdoption is a sample dog adoption application built to showcase Jetpack Co
 ![](https://github.com/nxtgencat/NxtPetAdoption/blob/6dce41933fe1a65006c0e37a531ab096e0f73f62/demo.gif)
 
 ## Preview
-![alt text](https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/home.png "Home")
-![alt text](https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/home_night.png "Home Night")
-![alt text](https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/details.png "Details")
-![alt text](https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/details_night.png "Details Night")
+
+<img src="https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/home.png" width="150" height="280">
+<img src="https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/home_night.png" width="150" height="280">
+<img src="https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/details.png" width="150" height="280">
+<img src="https://github.com/nxtgencat/NxtPetAdoption/blob/8b59d05ca23961f04f1c55b1b536ba6149d2f0f0/details_night.png" width="150" height="280">
 
 ## Built With 🛠
 
