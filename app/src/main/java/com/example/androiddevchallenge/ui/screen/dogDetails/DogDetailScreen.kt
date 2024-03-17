@@ -2,13 +2,7 @@ package com.example.androiddevchallenge.ui.screen.dogDetails
 
 import android.content.Context
 import android.widget.Toast
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -37,7 +31,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.data.repository.DefaultData
@@ -65,7 +58,8 @@ fun DogDetailScreen(
                 onMoreButtonClicked = { Toast.makeText(context, it, Toast.LENGTH_SHORT).show() }
             )
         }
-    ) {it ->
+    ) {paddingValues ->
+        val paddingValues = paddingValues
         selectedDog?.let { dog ->
             Column(
                 modifier = Modifier
@@ -173,53 +167,7 @@ fun DogNameAndBreed(
     }
 }
 
-@Composable
-fun DogDetails(
-    dog: Pet,
-    modifier: Modifier = Modifier,
-) {
-    Row(
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-    ) {
-        DogAttribute(name = "Age", attr = dog.age ?: "Unknown")
-        DogAttribute(name = "Coat", attr = dog.coat ?: "Unknown")
-        DogAttribute(name = "Gender", attr = dog.gender)
-    }
-}
 
-@Composable
-fun DogAttribute(name: String, attr: String) {
-
-    val modifier = if (MaterialTheme.colors.isLight) {
-        Modifier
-            .background(MaterialTheme.colors.primary.copy(alpha = 0.2f))
-            .border(BorderStroke(2.dp, MaterialTheme.colors.primary))
-    } else {
-        Modifier
-            .background(MaterialTheme.colors.onBackground.copy(alpha = 0.12f))
-            .border(BorderStroke(2.dp, MaterialTheme.colors.onBackground))
-    }
-
-    Box(
-        modifier = modifier
-            .padding(vertical = 16.dp, horizontal = 32.dp)
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
-                Text(
-                    text = name,
-                    style = MaterialTheme.typography.caption
-                )
-            }
-            Text(
-                text = attr,
-                style = MaterialTheme.typography.body1.copy(fontSize = 15.sp)
-            )
-        }
-    }
-}
 
 @Composable
 fun DogDetailTopAppBar(
