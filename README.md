@@ -10,6 +10,7 @@ NxtPetAdoption is a sample dog adoption application built to showcase Jetpack Co
 - **Navigation Animation:** Implements smooth animations while navigating between screens using the accompanist-navigation-animation library.
 
 ## Demo
+![](https://github.com/nxtgencat/NxtPetAdoption/blob/6dce41933fe1a65006c0e37a531ab096e0f73f62/demo.gif)
 
 ## Built With 🛠
 
