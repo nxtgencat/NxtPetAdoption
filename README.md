@@ -11,6 +11,8 @@ NxtPetAdoption is a sample dog adoption application built to showcase Jetpack Co
 
 ## Demo
 ![](https://github.com/nxtgencat/NxtPetAdoption/blob/6dce41933fe1a65006c0e37a531ab096e0f73f62/demo.gif)
+## Demo Explain
+https://drive.google.com/file/d/11zGcqbDRoZt1KPPsgK6sMdqr8C8tU-L1/view?usp=sharing
 
 ## Preview
 
